@@ -3,9 +3,8 @@ Given a string of text, write an algorithm that returns the text received in a r
 E.g reverseString('algorithms') // should return 'smhtirogla'
 */
 
-
-//ES5
 ////////Chaining Built in Methods:///////////
+//ES5
 // function reverseString(text) {
 //     return text.split("").reverse().join("");
 // }
@@ -16,9 +15,8 @@ function reverseString(text){
 }
 module.exports = reverseString
 
-
-//ES5
 //////For Loop:///////////
+//ES5
 // function reverseString(text) {
 //     let result = "";
 //     for (let i = text.length - 1; i >= 0; i--) {
@@ -35,9 +33,8 @@ function reverseString(text){
   }
   return result;
 }
-
-//ES5
 //////Recursion:///////////
+//ES5
 function reverseString(text) {
   if(text === ""){
     return ""
@@ -46,11 +43,14 @@ function reverseString(text) {
   }
 }
 
+
+//////Reduce:///////////
+//ES5
+function reverseString(text) {
+    return text.split("").reduce((acc, char) => char + acc, '')
+}
+
 //ES6
 function reverseString(text){
-  let result = "";
-  for (let char of text) {
-    result = char + result
-  }
-  return result;
+  return [...text].reduce((acc, char) => char + acc, '')
 }
