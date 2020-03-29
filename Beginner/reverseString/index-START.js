@@ -3,6 +3,8 @@ Given a string of text, write an algorithm that returns the text received in a r
 E.g reverseString('algorithms') // should return 'smhtirogla'
 */
 
+//
+
 ////////Chaining Built in Methods:///////////
 //ES5
 // function reverseString(text) {
