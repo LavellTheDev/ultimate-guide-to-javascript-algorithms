@@ -21,5 +21,16 @@ function vowelsCounter(text) {
 }
 
 
+//Regular Expression//
+function vowelsCounter(text) {
+let matchInstances = text.match(/[aeiou]/gi) ;
+
+if (matchInstances){
+  return matchInstances.length
+}else{
+  return 0
+}
+}
+
 
 module.exports = vowelsCounter;
